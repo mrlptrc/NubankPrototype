@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/tela.png);
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 40px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(4.7px);
+    -webkit-backdrop-filter: blur(4.7px);
+    border: 1px solid rgba(255, 255, 255, 0.29);
+    width: 80%;
+    height: 80vh;
+    display: flex;
+}
+
+.form-image{
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.form-image img{
+    width: 31rem;
+}
+
+.form {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex;
+    flex-direction: column;
+    padding: 3rem;
+    background-color: #fff;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.form-header {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-button {
+    display: flex;
+    align-items: flex;
+}
+
+.login-button button{
+    border: none;
+    background-color: #820ad1;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-button button:hover{
+    background-color: #820ad1;
+}
+
+.login-button button a{
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+}
+
+.form-header h1::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: #820ad1;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: transparent;
+}
+
+.input-box {
+    position: relative;
+    background-color: transparent;
+    border-width: 0px 0px 1px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.input-box input{
+    width: 100%;
+    box-shadow: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+}
+
+.input-group .input-box{
+    height: 60px;
+    width: 100%;
+}
+
+  .input-group .input-box input{
+    height: 40%;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    border-bottom: 2px solid silver;
+    position: relative;
+    top: 20%;
+  }
+  .input-box input:focus ~ label,
+  .input-box input:valid ~ label{
+    transform: translateY(-20px);
+    font-size: 15px;
+    color: #000000;
+  }
+  .input-group .input-box label{
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    color: grey;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  .input-box .underline{
+    position: relative;
+    height: 2px;
+    width: 100%;
+    top: 16%;
+  }
+  .input-box .underline:before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #820ad1;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+  }
+  .input-box input:focus ~ .underline:before,
+  .input-box input:valid ~ .underline:before{
+    transform: scaleX(1);
+  }
